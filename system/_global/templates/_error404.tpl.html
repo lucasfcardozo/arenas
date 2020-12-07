@@ -1,0 +1,36 @@
+{strip}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
+<head>
+    <title>Erro 404 - Página não encontrada</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="content-language" content="pt-br" />
+    <link href="{$urlCSS}/estilos.css" rel="stylesheet" type="text/css" media="all" />
+    <!--[if lte IE 7]><link href="{$urlCSS}/estilo_ie.css" rel="stylesheet" type="text/css" media="screen" /><![endif]-->
+    {if $errorDebug}
+	<script type="text/javascript" src="{$urlJS}/prototype.js"></script>
+    {literal}<style type="text/css">
+        .ErrorTable, .ErrorTable td{font-family:Arial, Helvetica, sans-serif; font-size:12px}
+        .ErrorTable td{padding:3px 2px}
+        .ErrorTable td a{color:#06c}
+        .ErrorTitle{background-color:#66C; color:#FFF; font-weight:bold; padding-left:10px}
+        .ErrorZebra{background:#efefef}
+        .ErrorLabel{font-weight:bold}
+    </style>{/literal}
+    {/if}
+</head>
+<body id="error_page">
+	<div id="wrap">
+    	<div class="container">
+            <h1>404 - Página não encontrada.</h1>
+            <a href="{$urlSite}" class="logotipo_jc" title="Página inicial - {$siteName}">
+            <img src="{$urlIMG}/logo_jc_min.gif" alt="{$siteName}" />
+            </a>
+        </div>
+    </div><!-- / #wrap -->
+    {if $errorDebug}
+        {$errorDebug}
+	{/if}
+</body>
+</html>
+{/strip}

@@ -1,0 +1,21 @@
+* { font-family:Arial, Helvetica, sans-serif; font-size:12px }
+
+.borda {border:2px solid #3a4752; margin:0; padding:0}
+
+a.remover{background:url(../images/bt_delete.png) center center no-repeat; width:14px; height:14px; display:inline-block}
+
+#mdlAltWnd {z-index:1501; position:fixed; background:#FFF; width:350px; padding:0 0 5px 0; margin:-50px 0 0 -175px; left:50%; top:50%; border:2px solid #3a4752}
+#mdlAltTitle, .title {padding:3px 0; margin:0; background:#3a4752; color:#FFF; text-align:center}
+#mdlAltMesnagem {padding:5px 10px}
+#mdlAltBts {text-align:center}
+#mdlAltBts button, button {border: 1px solid #6C7B93; background: url(../images/botao.gif); font-weight:bold; color: #2F497D; height: 20px; margin-right:5px; padding:0 7px}
+#mdlAltBts button:hover, button:hover {background: url(../images/botao_over.gif); color: #fff}
+
+tr.hl:hover{background:#d9e3ed}
+tr.lista_zebra {background:#E2E2E2}
+
+.listResultAutoComplete {background:#d9e3ed; border:1px solid #036}
+.listResultAutoComplete a {color:#000; text-decoration:none; padding:2px; overflow:hidden; display:block}
+.selecionado {background:#3a4752!important; color:#FFF!important}
+.loadingAutoComplete {background:url(../images/ajax-loader.gif) center center no-repeat; width:16px; height:16px; display:inline-block}
+.loading {background:url(../images/loading.gif); width:31px; height:31px; display:block}

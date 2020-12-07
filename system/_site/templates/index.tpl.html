@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Documento sem título</title>
+	<link type="text/css" rel="stylesheet" href="{$urlCSS}/style.css"  />
+    <script type="text/javascript" src="{$urlJS}/prototype.js"></script>
+    {if $SYSTEM._debug}
+	<script type="text/javascript" src="{$urlJS}/extensao_prototype.js"></script>
+    <script type="text/javascript">
+		AUTO_SHOW_DEBUG = false;
+	</script>
+    {/if}
+	<script type="text/javascript">
+		URL_SEARCH_TIMES = '{$urlSearchTimes}';
+		URL_VER_TIME     = '{$urlVerTime}';
+		URL_IMG = '{$urlIMG}';
+	</script>
+    <script type="text/javascript" src="{$urlJS}/scriptaculous.js?load=effects,autocomplete,mAlert,send_form,functions"></script>
+</head>
+<body>
+<table width="1000" border="0" cellspacing="2" cellpadding="2" align="center">
+  <tr>
+    <td width="505" align="left" valign="top"><form id="fCad" action="{$urlCadastro}" method="post" style="width:500px" class="borda">
+      <table width="100%" border="0" cellspacing="2" cellpadding="2">
+        <tr>
+          <td colspan="2" class="title">Novo Time</td>
+          </tr>
+        <tr>
+          <td width="23%">Nome:</td>
+          <td width="77%"><input name="itxNome" type="text" id="itxNome" size="45" /></td>
+          </tr>
+        <tr>
+          <td>Integrante 1:</td>
+          <td><input name="itxPlayer1" type="text" id="itxPlayer1" />
+            <select name="selPlayer1" id="selPlayer1">
+              <option value="">Selecione</option>
+              {foreach from=$classes item=classe key=id}
+              <option value="{$id}">{$classe}</option>
+              {/foreach}
+              </select>
+            <input name="itxSucubusPlayer1" type="text" id="itxSucubusPlayer1" value="0" size="2" maxlength="1" />
+            Sucubus points </td>
+          </tr>
+        <tr>
+          <td>Integrante 2:</td>
+          <td><input name="itxPlayer2" type="text" id="itxPlayer2" />
+            <select name="selPlayer2" id="selPlayer2">
+              <option value="">Selecione</option>
+              {foreach from=$classes item=classe key=id}
+              <option value="{$id}">{$classe}</option>
+	          {/foreach}
+              </select>
+            <input name="itxSucubusPlayer2" type="text" id="itxSucubusPlayer2" value="0" size="2" maxlength="1" />
+            Sucubus points </td>
+          </tr>
+        <tr>
+          <td align="left">Ganha:</td>
+          <td align="left"><input type="checkbox" name="ichGanha" id="ichGanha" />
+            sim</td>
+          </tr>
+        <tr>
+          <td colspan="2" align="right"><button type="button" style="margin:0">Salvar</button></td>
+          </tr>
+        </table>
+    </form>      <table width="500" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr>
+          <td colspan="3">&nbsp;</td>
+        </tr>
+        <tr>
+          <td width="92" nowrap="nowrap">Busca de time: </td>
+          <td width="245" id="tdAutoNomeProduto">&nbsp;</td>
+          <td align="left">
+            <label><input type="radio" name="irdTipoBusca" value="time" checked="checked" /> Time</label>
+            <label><input type="radio" name="irdTipoBusca" value="palyer" /> Player</label>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3">&nbsp;</td>
+        </tr>
+        <tr>
+          <td colspan="3" id="showTime">&nbsp;</td>
+        </tr>
+      </table>    </td>
+    <td valign="top" class="borda">
+    <div style="overflow:auto; height:500px">
+    <table width="100%" border="0" cellspacing="3" cellpadding="2">
+          <tr>
+            <td class="title">Nome</td>
+            <td class="title">Vece?</td>
+          </tr>
+      {foreach from=$times item=time name=tm}
+        <tr class="hl{if $smarty.foreach.tm.iteration%2==0} lista_zebra{/if}">
+        <td width="76%">{$time.nome}</td>
+        <td width="24%">{if $time.ganha}ganha{else}&nbsp;{/if}</td>
+      </tr>
+      {/foreach}
+    </table>
+    </div>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

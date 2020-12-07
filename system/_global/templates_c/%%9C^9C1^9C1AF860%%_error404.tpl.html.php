@@ -1,0 +1,10 @@
+<?php /* Smarty version 2.6.25, created on 2011-05-13 13:00:43
+         compiled from _error404.tpl.html */ ?>
+<?php echo '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br"><head><title>Erro 404 - Página não encontrada</title><meta http-equiv="content-type" content="text/html; charset=utf-8" /><meta http-equiv="content-language" content="pt-br" /><link href="'; ?><?php echo $this->_tpl_vars['urlCSS']; ?><?php echo '/estilos.css" rel="stylesheet" type="text/css" media="all" /><!--[if lte IE 7]><link href="'; ?><?php echo $this->_tpl_vars['urlCSS']; ?><?php echo '/estilo_ie.css" rel="stylesheet" type="text/css" media="screen" /><![endif]-->'; ?><?php if ($this->_tpl_vars['errorDebug']): ?><?php echo '<script type="text/javascript" src="'; ?><?php echo $this->_tpl_vars['urlJS']; ?><?php echo '/prototype.js"></script>'; ?><?php echo '<style type="text/css">
+        .ErrorTable, .ErrorTable td{font-family:Arial, Helvetica, sans-serif; font-size:12px}
+        .ErrorTable td{padding:3px 2px}
+        .ErrorTable td a{color:#06c}
+        .ErrorTitle{background-color:#66C; color:#FFF; font-weight:bold; padding-left:10px}
+        .ErrorZebra{background:#efefef}
+        .ErrorLabel{font-weight:bold}
+    </style>'; ?><?php echo ''; ?><?php endif; ?><?php echo '</head><body id="error_page"><div id="wrap"><div class="container"><h1>404 - Página não encontrada.</h1><a href="'; ?><?php echo $this->_tpl_vars['urlSite']; ?><?php echo '" class="logotipo_jc" title="Página inicial - '; ?><?php echo $this->_tpl_vars['siteName']; ?><?php echo '"><img src="'; ?><?php echo $this->_tpl_vars['urlIMG']; ?><?php echo '/logo_jc_min.gif" alt="'; ?><?php echo $this->_tpl_vars['siteName']; ?><?php echo '" /></a></div></div><!-- / #wrap -->'; ?><?php if ($this->_tpl_vars['errorDebug']): ?><?php echo ''; ?><?php echo $this->_tpl_vars['errorDebug']; ?><?php echo ''; ?><?php endif; ?><?php echo '</body></html>'; ?>

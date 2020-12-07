@@ -1,0 +1,55 @@
+<form action="{$urlEditar}" method="post" style="width:500px" id="fEdit" class="borda">
+	<input type="hidden" name="ihdTime" value="{$idTime}" />
+    <table width="500" border="0" cellspacing="2" cellpadding="2">
+      <tr>
+        <td colspan="2" class="title">Sobre o time</td>
+      </tr>
+      <tr>
+        <td>Nome:</td>
+        <td><input type="text" name="itxNome" value="{$nome}" size="45" /></td>
+      </tr>
+      {foreach from=$integrantes item=integrante key=id}
+      <tr>
+        <td>Integrante:</td>
+        <td>
+           <input name="itxPlayer[{$id}]" type="text" value="{$integrante.nome}" />
+           <select name="selPlayer[{$id}]">
+             <option value="">Selecione</option>
+             {foreach from=$classes item=classe key=idClasse}
+             <option value="{$idClasse}"{if $idClasse eq $integrante.idClasse} selected="selected"{/if}>{$classe}</option>
+             {/foreach}
+           </select>
+           <input name="itxSucubusPlayer[{$id}]" type="text" size="2" maxlength="1" value="{$integrante.sucubus}" /> Sucubus points
+           <a href="javascript:;" class="remover"></a>
+        </td>
+      </tr>
+      {/foreach}
+      <tr id="tpl" style="display:none">
+        <td>Integrante:</td>
+        <td>
+           <input name="itxPlayerNovo[]" type="text" />
+           <select name="selPlayerNovo[]">
+             <option value="">Selecione</option>
+             {foreach from=$classes item=classe key=idClasse}
+             <option value="{$idClasse}">{$classe}</option>
+             {/foreach}
+           </select>
+           <input name="itxSucubusPlayerNovo[]" type="text" size="2" maxlength="1" value="0" /> Sucubus points
+           <a href="javascript:;" class="remover"></a>
+        </td>
+      </tr>
+      <tr>
+        <td align="left" colspan="2"><button type="button" style="margin:0">Add novo integrante</button></td>
+      </tr>
+      <tr>
+        <td align="left">Ganha:</td>
+        <td align="left"><input type="checkbox" name="ichGanha"{if $ganha} checked="checked"{/if} />
+          sim</td>
+      </tr>
+      <tr>
+        <td colspan="2" align="right">
+           <button class="submit" type="button" style="margin:0">Salvar</button>
+        </td>
+      </tr>
+    </table>
+</form>
